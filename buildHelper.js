@@ -120,5 +120,3 @@ setHomePageInPackageJSON.tests = [
 // 2. Set homepage in package.json
 // 3. Run the build commands
 // 4. Try to reset everything (`git checkout `), but GitHUb clones the repo again for each deploy, so may not be needed.
-
-await getRepoDetails.tests[1]();
