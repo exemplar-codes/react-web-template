@@ -5,11 +5,11 @@ import {
   setPackageJSONValuesForCurrentRepo,
 } from "./buildHelper";
 
-const { viteBaseName = "", ghURL = "" } = await getRepoDetails();
+const { viteBaseName = "", repoName = "", ghURL = "" } = await getRepoDetails();
 
 if (false && import.meta.env?.PROD) {
-  // this (env being PROD) is true during gh pages buld, as seen in message 'vite v4.4.5 building for production...'
-  await setPackageJSONValuesForCurrentRepo(ghURL); // set package.json homepage for gh pages
+  // this (env being PROD) is true during gh pages build, as seen in the message 'vite v4.4.5 building for production...'
+  await setPackageJSONValuesForCurrentRepo(repoName, ghURL); // set package.json homepage for gh pages
 }
 
 // https://vitejs.dev/config/
