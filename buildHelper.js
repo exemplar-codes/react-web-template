@@ -15,7 +15,7 @@ const execAsync = promisify(exec);
  *
  * reusable
  */
-export default async function getRepoDetails(safe = true) {
+export const getRepoDetails = async (safe = true) => {
   const { stdout: gitConfig } = await execAsync("cat .git/config");
 
   const gitUrl = gitConfig
@@ -46,7 +46,7 @@ export default async function getRepoDetails(safe = true) {
 
     viteBaseName: (safe ? repoName : null) || __dirname.split(path.sep).at(-1), // get from repo, or fallback to folder name
   };
-}
+};
 getRepoDetails.tests = [
   async () => {
     console.log(await getRepoDetails());
@@ -102,10 +102,11 @@ setPackageJSON.tests = [
  * Use the `getRepoDetails` function
  */
 export const setHomePageInPackageJSON = async (value = null) => {
+  const HOMEPAGE_KEY_IN_PACKAGE_JSON = "homepage";
   const { ghURL = "" } = await getRepoDetails();
   return setPackageJSON((currentValue) => ({
     ...currentValue,
-    homepage: value || ghURL,
+    [HOMEPAGE_KEY_IN_PACKAGE_JSON]: value || ghURL,
   }));
 };
 setHomePageInPackageJSON.tests = [
