@@ -1,5 +1,7 @@
 # React + Vite
 
+I am tired of [create-react-app](https://github.com/sanjar-notes/react/issues/45)
+
 ## Using repo as template (optional)
 
 1. Fork this repo to start a new project.
@@ -8,6 +10,8 @@
 
 ## Running
 
-4. `npm install` - install dependencies
-5. `npm run dev` - start dev server
-6. `npm run predeploy && npm run deploy` - deploy latest commit to github pages
+1. `npm install` - install dependencies
+2. `npm run dev` - start dev server
+3. `npm run predeploy && npm run deploy` - deploy latest commit to github pages
+
+Tip: Use [`pnpm`](https://pnpm.io/installation#using-npm) instead of `npm` for even faster installation time.
