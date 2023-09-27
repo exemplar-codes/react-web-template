@@ -18,7 +18,9 @@ function App() {
       >
         Source code (github repo)
       </a>
-      <time>Last modified: {lastModifiedLabel}</time>
+      <time style={{ display: "block" }}>
+        Last modified: {lastModifiedLabel}
+      </time>
     </div>
   );
 }
