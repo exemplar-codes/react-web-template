@@ -4,7 +4,9 @@ import { getRepoDetails, setHomePageInPackageJSON } from "./buildHelper";
 
 const { viteBaseName = "", ghURL = "" } = await getRepoDetails();
 
-await setHomePageInPackageJSON(ghURL); // set package.json homepage for gh pages
+if (import.meta.env?.PROD) {
+  await setHomePageInPackageJSON(ghURL); // set package.json homepage for gh pages
+}
 
 // https://vitejs.dev/config/
 export default defineConfig({
