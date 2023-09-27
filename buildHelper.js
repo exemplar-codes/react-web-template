@@ -102,20 +102,30 @@ setPackageJSON.tests = [
  * So we want to get github pages URL and set it in package.json
  * Use the `getRepoDetails` function
  *
- * GitHub Pages needs this key
+ * GitHub Pages needs this key. DX gain: this is a template repo, and I don't want to edit those two values (homepage and name in package.json) manually.
  */
-export const setHomePageInPackageJSON = async (value = null) => {
-  const HOMEPAGE_KEY_IN_PACKAGE_JSON = "homepage";
-  const { ghURL = "" } = await getRepoDetails();
+export const setPackageJSONValuesForCurrentRepo = async (
+  nameValue = null,
+  homePageValue = null
+) => {
+  const PACKAGE_JSON_NAME = "name";
+  const PACKAGE_JSON_HOMEPAGE = "homepage";
+
+  const { repoName = "", ghURL = "" } = await getRepoDetails();
   return setPackageJSON((currentValue) => ({
     ...currentValue,
-    [HOMEPAGE_KEY_IN_PACKAGE_JSON]: value || ghURL,
+    [PACKAGE_JSON_NAME]: nameValue || repoName,
+    [PACKAGE_JSON_HOMEPAGE]: homePageValue || ghURL,
   }));
 };
-setHomePageInPackageJSON.tests = [
+setPackageJSONValuesForCurrentRepo.tests = [
   async () => {
     // homepage becomes 'example.com'
-    await setHomePageInPackageJSON("example.com");
+    await setPackageJSONValuesForCurrentRepo(null, "example.com");
+  },
+  async () => {
+    // first, mess up package.json's values, then run. It should reset to actual values.
+    await setPackageJSONValuesForCurrentRepo();
   },
 ];
 
