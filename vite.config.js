@@ -4,7 +4,7 @@ import { getRepoDetails, setHomePageInPackageJSON } from "./buildHelper";
 
 const { viteBaseName = "", ghURL = "" } = await getRepoDetails();
 
-if (import.meta.env?.PROD) {
+if (import.meta.env?.PROD) { // this is true during gh pages buld, as seen in message 'vite v4.4.5 building for production...'
   await setHomePageInPackageJSON(ghURL); // set package.json homepage for gh pages
 }
 
