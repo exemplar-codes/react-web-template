@@ -1,3 +1,10 @@
+* {
+  font-size: 32px;
+  /* user agent stylesheet override */
+  margin: 0;
+  padding: 0;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -39,4 +46,10 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
