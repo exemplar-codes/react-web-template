@@ -2,9 +2,11 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import getLastModifiedLabel from "./utils/getLastModifiedLabel";
 
 import FirstPage from "./pages/FirstPage";
 
+const lastModifiedLabel = getLastModifiedLabel();
 function App() {
   return (
     <div>
@@ -16,6 +18,7 @@ function App() {
       >
         Source code (github repo)
       </a>
+      <time>Last modified: {lastModifiedLabel}</time>
     </div>
   );
 }
