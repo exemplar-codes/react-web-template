@@ -1,10 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+
+import FirstPage from "./pages/FirstPage";
 
 function App() {
-  const [count, setCount] = useState(0)
+  return (
+    <div>
+      <h2>Vite React JS Template</h2>
+      <FirstPage />
+      <a
+        href="https://github.com/exemplar-codes/vite-react-js-template"
+        target="_blank"
+      >
+        Source code (github repo)
+      </a>
+    </div>
+  );
+}
+
+function OriginialViteApp() {
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -29,7 +46,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
