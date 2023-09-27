@@ -12,6 +12,7 @@ const execAsync = promisify(exec);
 
 /**
  * Get repo details, repoUrl, ghPageURL (general prediction)
+ * Most importantly the `base` of vite.config.js (needed for deployment in GitHub page)
  *
  * reusable
  */
@@ -100,6 +101,8 @@ setPackageJSON.tests = [
  *
  * So we want to get github pages URL and set it in package.json
  * Use the `getRepoDetails` function
+ *
+ * GitHub Pages needs this key
  */
 export const setHomePageInPackageJSON = async (value = null) => {
   const HOMEPAGE_KEY_IN_PACKAGE_JSON = "homepage";
