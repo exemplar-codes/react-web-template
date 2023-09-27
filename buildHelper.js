@@ -15,7 +15,7 @@ const execAsync = promisify(exec);
  *
  * reusable
  */
-export default async function getRepoDetails() {
+export default async function getRepoDetails(safe = true) {
   const { stdout: gitConfig } = await execAsync("cat .git/config");
 
   const gitUrl = gitConfig
@@ -44,12 +44,16 @@ export default async function getRepoDetails() {
     url: `https://${domain}.${cctld}/${orgOrUsername}/${repoName}`,
     ghURL: `https://${orgOrUsername}.github.io/${repoName}/`, // https://exemplar-codes.github.io/vite-react-js-template/
 
-    viteBaseName: repoName || __dirname.split(path.sep).at(-1), // get from repo, or fallback to folder name
+    viteBaseName: (safe ? repoName : null) || __dirname.split(path.sep).at(-1), // get from repo, or fallback to folder name
   };
 }
 getRepoDetails.tests = [
   async () => {
     console.log(await getRepoDetails());
+  },
+  async () => {
+    // unsafe works, creates repoName from folderName
+    console.log(await getRepoDetails(false));
   },
 ];
 
@@ -116,3 +120,5 @@ setHomePageInPackageJSON.tests = [
 // 2. Set homepage in package.json
 // 3. Run the build commands
 // 4. Try to reset everything (`git checkout `), but GitHUb clones the repo again for each deploy, so may not be needed.
+
+await getRepoDetails.tests[1]();
