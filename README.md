@@ -1,6 +1,7 @@
 # USP
 
 Set up, and deploy React app for free within 10 seconds.
+Vite > CRA
 
 ## React + Vite (ignorable)
 
