@@ -11,7 +11,7 @@ I intent to use this as my go to React template.
 
 1. `npm install` - install dependencies
 2. `npm run dev` - start dev server
-3. `npm run predeploy && npm run deploy` - deploy latest commit to github pages. No manual work (even turning on GitHub Pages feature) is needed.
+3. `npm run predeploy && npm run deploy` - deploy latest commit to github pages. No manual work is needed. Just visit the URL, it should be live!
 
 
 ## Using repo as template (optional)
