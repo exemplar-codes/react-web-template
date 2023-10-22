@@ -4,14 +4,14 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import getLastModifiedLabel from "./utils/getLastModifiedLabel";
 
-import FirstPage from "./pages/FirstPage";
+import FirstPage_ from "./pages/FirstPage_";
 
 const lastModifiedLabel = getLastModifiedLabel();
 function App() {
   return (
     <div>
       <h2>Vite React JS Template</h2>
-      <FirstPage />
+      <FirstPage_ />
       <a
         href="https://github.com/exemplar-codes/vite-react-js-template"
         target="_blank"
