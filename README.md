@@ -12,6 +12,6 @@ I am tired of [create-react-app](https://github.com/sanjar-notes/react/issues/45
 
 1. `npm install` - install dependencies
 2. `npm run dev` - start dev server
-3. `npm run predeploy && npm run deploy` - deploy latest commit to github pages
+3. `npm run predeploy && npm run deploy` - deploy latest commit to github pages. No manual work (even turning on GitHub Pages feature) is needed.
 
 Tip: Use [`pnpm`](https://pnpm.io/installation#using-npm) instead of `npm` for even faster installation time.
