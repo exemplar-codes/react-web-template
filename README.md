@@ -21,5 +21,6 @@ I intent to use this as my go to React template.
 3. Add package.json and commit.
 
 
-
-Tip: Use [`pnpm`](https://pnpm.io/installation#using-npm) instead of `npm` for even faster installation time.
+## Notes
+- Tip: Use [`pnpm`](https://pnpm.io/installation#using-npm) instead of `npm` for even faster installation time.
+- Deletable/starter code is marked by an underscore at the end. Folders and contents like this can be deleted without affecting Vite.
