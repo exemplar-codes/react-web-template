@@ -4,7 +4,7 @@ import path from "path";
 import { exec } from "child_process";
 import { fileURLToPath } from "url";
 import { promisify } from "util";
-import PACKAGE_JSON from "./package.json" assert { type: "json" };
+import PACKAGE_JSON from "../package.json" assert { type: "json" };
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -80,7 +80,7 @@ export const setPackageJSON = async (
   const newValue = isFunction ? valueOrFunction(PACKAGE_JSON) : valueOrFunction;
 
   await fs.writeFile(
-    path.join(__dirname, "package.json"),
+    path.join(__dirname, "..", "package.json"),
     JSON.stringify(newValue)
   );
 };

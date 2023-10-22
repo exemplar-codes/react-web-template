@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "fix_package_json_for_current_repo": "node fixPackageJSON.js && echo 'Please format, check and commit package.json'"
+    "fix_package_json_for_current_repo": "node build_utils_/fixPackageJSON_.js && echo 'Please format, check and commit package.json'"
   },
   "dependencies": {
     "react": "^18.2.0",

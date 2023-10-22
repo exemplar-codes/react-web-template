@@ -1,4 +1,4 @@
-export default function getLastModifiedLabel() {
+export default function getLastModifiedLabel_() {
   const lastModifiedToday =
     new Date(document.lastModified).getDate() === new Date().getDate();
 

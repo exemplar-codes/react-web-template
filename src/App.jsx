@@ -2,11 +2,11 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import getLastModifiedLabel from "./utils/getLastModifiedLabel";
+import getLastModifiedLabel_ from "./utils_/getLastModifiedLabel_";
 
-import FirstPage_ from "./pages/FirstPage_";
+import FirstPage_ from "./pages_/FirstPage_";
 
-const lastModifiedLabel = getLastModifiedLabel();
+const lastModifiedLabel = getLastModifiedLabel_();
 function App() {
   return (
     <div>
