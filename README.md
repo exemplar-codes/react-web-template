@@ -2,12 +2,12 @@
 
 Set up, and deploy React app for free within 10 seconds.
 
-# React + Vite (ignorable)
+## React + Vite (ignorable)
 
 I am tired of [create-react-app](https://github.com/sanjar-notes/react/issues/45), it's very slow to `npm install` and `npm start`.
 I intent to use this as my go to React template.
 
-## How to use
+# How to use
 
 1. `npm install` - install dependencies
 2. `npm run dev` - start dev server
