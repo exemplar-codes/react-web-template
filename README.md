@@ -1,6 +1,6 @@
 # USP
 
-Set up, and deploy React app for free within 10 seconds.
+Set up, and deploy React app for free within 10 seconds. You need a GitHub account.
 
 # React + Vite (ignorable)
 
