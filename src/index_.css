@@ -67,3 +67,20 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* #step2 add this to some CSS file, and make sure its used (by JSX import or HTML link tag)
+Tailwind replaces these lines with Tailwind classes, i.e. in the final CSS, these 3 lines are absent
+For more info, see https://tailwindcss.com/docs/functions-and-directives#tailwind
+*/
+
+@tailwind base;
+/* #step3 Tailwind removes all default styling, including browser provided - headings, links appear like normal text
+ Tailwind calls this preflight (https://tailwindcss.com/docs/preflight)
+
+ To turn it off, there are two ways, either:
+ - comment `@tailwind base`, above.
+ - Set tailwind.config.js .corePlugins.preflight: false.
+ */
+
+@tailwind components;
+@tailwind utilities;
