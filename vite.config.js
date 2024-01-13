@@ -16,4 +16,5 @@ if (false && import.meta.env?.PROD) {
 export default defineConfig({
   plugins: [react()],
   base: `/${viteBaseName}/`,
+  assetsInclude: ["**/*.zip", "**/*.html"], // for zip and iframe assets
 });
