@@ -73,7 +73,7 @@ Tailwind replaces these lines with Tailwind classes, i.e. in the final CSS, thes
 For more info, see https://tailwindcss.com/docs/functions-and-directives#tailwind
 */
 
-@tailwind base;
+@import "tailwindcss/base";
 /* #step3 Tailwind removes all default styling, including browser provided - headings, links appear like normal text
  Tailwind calls this preflight (https://tailwindcss.com/docs/preflight)
 
@@ -82,5 +82,5 @@ For more info, see https://tailwindcss.com/docs/functions-and-directives#tailwin
  - Set tailwind.config.js .corePlugins.preflight: false.
  */
 
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

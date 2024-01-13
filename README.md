@@ -27,4 +27,5 @@ I intent to use this as my go to React template.
 
 ## Tools
 
-1. [Tailwind](https://tailwindcss.com/) - added node package to project, so sorting of classes works. Install prettier (to activate sorting) and tailwind (intellisense) on vscode.
+1. [Tailwind](https://tailwindcss.com/) - added node package to project, so sorting of classes works. Install prettier (to activate sorting) and tailwind official extension (for intellisense) on vscode.
+2. Scss - installed node package. The tailwind vscode extension gives highlighting support for Tailwind stuff in scss files.

@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "*.scss": "tailwindcss" // prevents @apply yellow lines in scss files, still retains Vscode's css lint (see https://stackoverflow.com/a/61333686/11392807)
+    }
+}
