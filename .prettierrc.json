@@ -1,3 +1,20 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "singleQuote": false,
+  "semi": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "importOrder": [
+    "^(react|@reduxjs|prop-types)(.*)$",
+    "^(api|hooks)(.*)$",
+    "^store/reducers/(.*)$",
+    "^store/selectors/(.*)$",
+    "^components/core/(.*)$",
+    "^components/(.*)$",
+    "^assets/(.*)$",
+    "^utils(.*)$",
+    "^constants/(.*)$",
+    ".*"
+  ],
+  "importOrderType": "imports",
+  "importOrderSortSpecifiers": true,
+  "importOrderSeparation": true
 }
