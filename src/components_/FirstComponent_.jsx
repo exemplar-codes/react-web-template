@@ -1,3 +1,3 @@
 export default function FirstComponent_() {
-  return <div>FirstComponent_</div>;
+  return <div className="block w-full text-blue-500">FirstComponent_</div>;
 }

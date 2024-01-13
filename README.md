@@ -14,14 +14,17 @@ I intent to use this as my go to React template.
 2. `npm run dev` - start dev server
 3. `npm run predeploy && npm run deploy` - deploy latest commit to github pages. No manual work is needed. Just visit the URL, it should be live!
 
-
 ## Using repo as template (optional)
 
 1. Fork this repo on GitHub to start a new project.
 2. Run `npm run fix_package_json_for_current_repo`. This fixes the `homepage` and `name` keys, which are needed for GitHub pages deployment.
 3. Add package.json and commit.
 
-
 ## Notes
+
 - Tip: Use [`pnpm`](https://pnpm.io/installation#using-npm) instead of `npm` for even faster installation time.
 - Deletable/starter code is marked by an underscore at the end. Folders and contents like this can be deleted without affecting Vite.
+
+## Tools
+
+1. [Tailwind](https://tailwindcss.com/) - added node package to project, so sorting of classes works. Install prettier (to activate sorting) and tailwind (intellisense) on vscode.
