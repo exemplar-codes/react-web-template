@@ -8,6 +8,7 @@ import FirstPage_ from "./pages_/FirstPage_";
 
 const lastModifiedLabel = getLastModifiedLabel_();
 function App() {
+  // return <OriginialViteApp />;
   return (
     <div>
       <h2>Vite React JS Template</h2>
@@ -15,6 +16,7 @@ function App() {
       <a
         href="https://github.com/exemplar-codes/vite-react-js-template"
         target="_blank"
+        rel="noreferrer"
       >
         Source code (github repo)
       </a>
@@ -25,16 +27,17 @@ function App() {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 function OriginialViteApp() {
   const [count, setCount] = useState(0);
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" target="_blank" rel="noreferrer">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
