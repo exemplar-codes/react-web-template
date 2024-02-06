@@ -1,9 +1,9 @@
-import FirstComponent_ from "../components/FirstComponent_";
+import FirstComponent from "../components/FirstComponent";
 
-export default function FirstPage_() {
+export default function FirstPage() {
   return (
     <div>
-      FirstPage_ <FirstComponent_ />
+      FirstPage <FirstComponent />
       {/* #step4 - this is commented but it would still be picked up by Tailwind
 
       Tailwind uses simple regex to pick up classes, it does not run the code, or considerJS

@@ -2,17 +2,17 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import getLastModifiedLabel_ from "./utils/getLastModifiedLabel_";
+import getLastModifiedLabel from "./utils/getLastModifiedLabel";
 
-import FirstPage_ from "./pages/FirstPage_";
+import FirstPage from "./pages/FirstPage";
 
-const lastModifiedLabel = getLastModifiedLabel_();
+const lastModifiedLabel = getLastModifiedLabel();
 function App() {
   // return <OriginialViteApp />;
   return (
     <div>
       <h2>Vite React JS Template</h2>
-      <FirstPage_ />
+      <FirstPage />
       <a
         href="https://github.com/exemplar-codes/vite-react-js-template"
         target="_blank"

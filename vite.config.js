@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import {
   getRepoDetails,
   setPackageJSONValuesForCurrentRepo,
-} from "./build_utils_/buildHelper_";
+} from "./build_utils/buildHelper";
 
 const { viteBaseName = "", repoName = "", ghURL = "" } = await getRepoDetails();
 

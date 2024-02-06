@@ -1,7 +1,7 @@
 // Imports work simple - you import the url
 import CliboardUrl from "../assets/Clipboard.png";
 
-export default function FirstComponent_() {
+export default function FirstComponent() {
   return (
     <div className="block w-full text-blue-500">
       <img
