@@ -1,4 +1,4 @@
-import FirstComponent_ from "../components_/FirstComponent_";
+import FirstComponent_ from "../components/FirstComponent_";
 
 export default function FirstPage_() {
   return (

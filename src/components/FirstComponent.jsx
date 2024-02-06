@@ -1,5 +1,5 @@
 // Imports work simple - you import the url
-import CliboardUrl from "../assets_/Clipboard.png";
+import CliboardUrl from "../assets/Clipboard.png";
 
 export default function FirstComponent_() {
   return (

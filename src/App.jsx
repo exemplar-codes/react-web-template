@@ -1,10 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets_/react.svg";
+import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import getLastModifiedLabel_ from "./utils_/getLastModifiedLabel_";
+import getLastModifiedLabel_ from "./utils/getLastModifiedLabel_";
 
-import FirstPage_ from "./pages_/FirstPage_";
+import FirstPage_ from "./pages/FirstPage_";
 
 const lastModifiedLabel = getLastModifiedLabel_();
 function App() {
