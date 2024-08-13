@@ -6,9 +6,12 @@
   },
   "extends": [
     "eslint:recommended",
+    "airbnb-base",
+    "react-app",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended"
   ],
   "ignorePatterns": [
     "dist",
@@ -24,18 +27,111 @@
     }
   },
   "plugins": [
+    "prettier",
+    "react",
+    "import",
     "react-refresh"
   ],
   "rules": {
+    // TECH_DEBT check if extras/wrong stuff here
     "react-refresh/only-export-components": [
       "warn",
       {
         "allowConstantExport": true
       }
     ],
-    "camelcase": "warn",
+    "camelcase": "error",
     "react/jsx-key": [
       1
-    ]
-  }
+    ],
+    "prefer-destructuring": "error",
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": "off",
+    "global-require": "warn",
+    "no-return-await": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      {
+        "ignorePackages": true,
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true,
+        "allowFunctions": true
+      }
+    ],
+    "react/button-has-type": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "import/no-extraneous-dependencies": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "no-param-reassign": "off",
+    "react/forbid-prop-types": "off",
+    "consistent-return": "off",
+    "no-nested-ternary": "off",
+    "react/jsx-curly-newline": "off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/jsx-wrap-multilines": "off",
+    "no-unneeded-ternary": "off",
+    "array-callback-return": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/mouse-events-have-key-events": "off",
+    "react/require-default-props": "off",
+    "react/jsx-indent": "off",
+    "no-use-before-define": "off",
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
+    "lines-between-class-members": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "max-classes-per-file": "off",
+    "import/no-anonymous-default-export": [
+      "error",
+      {
+        "allowArray": true,
+        "allowArrowFunction": true,
+        "allowObject": true
+      }
+    ],
+    "react/display-name": 0
+  },
+  "overrides": [
+    {
+      "files": [
+        "vite.config.js" // imports from vite-plugin-eslint, ignore
+      ],
+      "rules": {
+        "import/no-extraneous-dependencies": 0
+      }
+    }
+  ]
 }
