@@ -1,5 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import svgr from "@svgr/rollup";
+
 import {
   getRepoDetails,
   setPackageJSONValuesForCurrentRepo,
@@ -14,7 +16,10 @@ if (false && import.meta.env?.PROD) {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    svgr({ dimensions: true, svgo: false, typescript: false }),
+  ],
   base: `/${viteBaseName}/`,
   assetsInclude: ["**/*.zip"], // for zip and iframe assets
 });
