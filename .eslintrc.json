@@ -132,6 +132,14 @@
       "rules": {
         "import/no-extraneous-dependencies": 0
       }
+    },
+    {
+      "files": [
+        "src/components/core/**/*.jsx" // imports from storybook packages which are devDependencies, ignore
+      ],
+      "rules": {
+        "react/display-name": 0
+      }
     }
   ]
 }
